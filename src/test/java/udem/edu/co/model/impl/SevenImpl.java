@@ -1,16 +1,10 @@
 package udem.edu.co.model.impl;
 
 import jakarta.persistence.Table;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 import udem.edu.co.model.Seven;
 
 import java.util.List;
 
-@Getter
-@Setter
-@Data
 @Table(name="Sevens")
 public class SevenImpl implements Seven {
     private String nombre;
