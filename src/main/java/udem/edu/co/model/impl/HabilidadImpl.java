@@ -12,10 +12,7 @@ import udem.edu.co.model.Habilidad;
  *
  * @author CorvvZ
  */
-@Getter
-@Setter
-@Data
-@Table(name="Habilidades")
+
 public class HabilidadImpl implements Habilidad {
     private String habilidad;
     /**
@@ -39,12 +36,16 @@ public class HabilidadImpl implements Habilidad {
     public void setHabilidad(String habilidad) {
         this.habilidad = habilidad;
     }
+
+
     /**
      * Método toString para representar la habilidad como una cadena de texto.
      * @return Una representación en cadena de la habilidad.
      */
     @Override
     public String toString() {
-        return habilidad;
+        return habilidad ;
     }
+
+
 }

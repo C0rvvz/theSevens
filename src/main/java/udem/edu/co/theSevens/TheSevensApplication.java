@@ -17,7 +17,7 @@ public class TheSevensApplication {
 	 * Método principal que inicia la aplicación
 	 * @param args Argumentos de línea de comandos
 	 */
-	public static void main(String[] args) {
+	public void main(String[] args) {
 		Menu menu = new Menu();
 		menu.correrPrograma();
 		SpringApplication.run(TheSevensApplication.class, args);

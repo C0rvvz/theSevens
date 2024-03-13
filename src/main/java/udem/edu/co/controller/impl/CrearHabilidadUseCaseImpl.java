@@ -11,17 +11,23 @@ import udem.edu.co.model.impl.HabilidadImpl;
  * @author CorvvZ
  */
 public class CrearHabilidadUseCaseImpl implements CrearHabilidadUseCase {
+
+    private HabilidadImpl habilidad;
     /**
      * Método para crear una habilidad de fuerza.
      * @return La habilidad creada.
      */
-    public static HabilidadImpl crearHabilidadDeFuerza() {
-        return new HabilidadImpl("Fuerza");
-    }
+
     /**
      * Método para crear una habilidad de vuelo.
+     *
      * @return La habilidad creada.
      */
+    public HabilidadImpl crearHabilidadDeFuerza() {
+        this.habilidad.setHabilidad("Fuerza");
+        return habilidad;
+    }
+
     public static HabilidadImpl crearHabilidadDeVolador() {
         return new HabilidadImpl("Volador");
     }
@@ -53,6 +59,8 @@ public class CrearHabilidadUseCaseImpl implements CrearHabilidadUseCase {
     public static HabilidadImpl crearHabilidadDeTransformacionl() {
         return new HabilidadImpl("Transformacion");
     }
+
+
     /**
      * Método para crear una habilidad de manipulación material.
      * @return La habilidad creada.

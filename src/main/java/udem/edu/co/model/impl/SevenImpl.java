@@ -13,10 +13,6 @@ import java.util.List;
  *
  * @author CorvvZ
  */
-@Getter
-@Setter
-@Data
-@Table(name="Sevens")
 public class SevenImpl implements Seven {
     private String nombre;
     private List<HabilidadImpl> habilidades;

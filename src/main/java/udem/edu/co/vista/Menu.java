@@ -20,7 +20,8 @@ public class Menu {
      * Constructor de la clase Menu que inicializa la lista de superhéroes y el scanner para entrada de datos.
      */
     public Menu() {
-        this.sevenImpls = CrearSevenUseCaseImpl.crearSeven();
+        CrearSevenUseCaseImpl crearSevenUseCaseImpl = new CrearSevenUseCaseImpl();
+        this.sevenImpls = crearSevenUseCaseImpl.crearSeven();
         this.scanner = new Scanner(System.in);
     }
     /**
@@ -64,18 +65,19 @@ public class Menu {
         if (!menuMostrado) {
             System.out.println("⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄ The Sevens ⠄⠄⠄⠄⠄⠄⠄⠄⠄\n");
         }
-        System.out.println("1. | Todos los supers que aun no se los lleva el chamuco |");
+        System.out.println("1. | Todos los supers                                    |");
         System.out.println("2. | Supers con mucha fuerza                             |");
         System.out.println("3. | Supers que vuelan mucho                             |");
         System.out.println("4. | Supers que son practicamente inmortales             |");
-        System.out.println("5. | Supers que pueden manipular la energía               |");
+        System.out.println("5. | Supers que pueden manipular la energía              |");
         System.out.println("6. | Supers que manipulan los cerebelos o Telepatia      |");
         System.out.println("7. | Supers que se cambian de forma o se transforman     |");
-        System.out.println("8. | Supers con la manipulacion de la candela            |");
+        System.out.println("8. | Supers con la manipulacion del fuego                |");
         System.out.println("9. | Supers que corren mucho                             |");
-        System.out.println("10.| Supers que controlan animales o los pescaos         |");
-        System.out.println("11.| Chao con Dios                                       |\n");
-        System.out.print("Elija un número, se le tiene lo más agudo de código limpio: ");
+        System.out.println("10.| Supers que controlan animales                       |");
+        System.out.println("11.| Color de piel blanco                                |");
+        System.out.println("11.| Cerrando el programa                                |\n");
+        System.out.print("Elija un número: ");
         menuMostrado = true;
         return scanner.nextInt();
     }
@@ -116,8 +118,10 @@ public class Menu {
                     break;
                 case 10:
                     listarSevensHabilidad("Habilidad con Animales");
-                    break;
                 case 11:
+                    listarSevensHabilidad("Blanco");
+                    break;
+                case 12:
                     listarTexto("Fin del Programa, Adiós.");
                     break;
                 default:

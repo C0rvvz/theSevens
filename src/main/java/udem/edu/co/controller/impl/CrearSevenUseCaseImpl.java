@@ -21,21 +21,21 @@ public class CrearSevenUseCaseImpl implements CrearSevenUseCase {
      * Método estático para crear una lista de superhéroes del grupo Seven con sus respectivas habilidades.
      * @return Una lista de instancias de superhéroes del grupo Seven.
      */
-    public static List<SevenImpl> crearSeven(){
+    public List<SevenImpl> crearSeven(){
         List<SevenImpl> sevenImpls = new ArrayList<>();
 
         SevenImpl sevenImpl1 = new SevenImpl();
         sevenImpl1.setNombre("Stormfront");
         List<HabilidadImpl> habilidadImplStormfront = new ArrayList<>();
         habilidadImplStormfront.add(CrearHabilidadUseCaseImpl.crearHabilidadDeManipulacionDeEnergia());
+
         sevenImpl1.setHabilidades(habilidadImplStormfront);
         sevenImpls.add(sevenImpl1);
 
         SevenImpl sevenImpl2 = new SevenImpl();
         sevenImpl2.setNombre("Starlight");
         List<HabilidadImpl> habilidadImplStarlight = new ArrayList<>();
-        habilidadImplStarlight.add(CrearHabilidadUseCaseImpl.crearHabilidadDeManipulacionDeEnergia());
-        habilidadImplStarlight.add(CrearHabilidadUseCaseImpl.crearHabilidadDeVolador());
+        habilidadImplStarlight.add(CrearHabilidadUseCaseImpl.crearHabilidadDeFuerza());
         sevenImpl2.setHabilidades(habilidadImplStarlight);
         sevenImpls.add(sevenImpl2);
 
